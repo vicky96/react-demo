@@ -8,4 +8,3 @@ module.exports = () => ({
   age: faker.random.number({ 'min': 1, 'max': 100 }),
   phone:faker.phone.phoneNumber()
 })
-
