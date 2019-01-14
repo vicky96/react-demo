@@ -8,5 +8,5 @@ export const fetchUserListEpic = action$ =>
   action$.ofType(FETCHUSERLIST)
    .mergeMap(action => {
      const api = process.env.REACT_APP_API === 'mock' ? '/mock/json' : '/json';
-     return ajax.getJSON(`${api}/test/userList`).map(response => FetchUserListSucceed(response))
+     return ajax.getJSON(`${api}/test/userList?page=${action.payload.page}`).map(response => FetchUserListSucceed(response))
    })

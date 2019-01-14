@@ -6,5 +6,6 @@ module.exports = () => ({
   img: faker.image.avatar(),
   name: faker.name.lastName(),
   age: faker.random.number({ 'min': 1, 'max': 100 }),
-  phone:faker.phone.phoneNumber()
+  phone:faker.phone.phoneNumber(),
+  country: faker.address.country()
 })
